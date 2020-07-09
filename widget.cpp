@@ -37,10 +37,8 @@ Widget::Widget(QWidget *parent): QWidget(parent){
     connect(clearButton,SIGNAL(clicked()),this,SLOT(onClearButtonClicked()));
 }
 Widget::~Widget(){
-
 }
 void Widget::onPlusButtonClicked(){
-    qDebug()<<"Plus Button Clicked";
     double a = firstInput->text().toDouble();
     double b = secondInput->text().toDouble();
     QString result = QString::number(a+b);
@@ -48,7 +46,6 @@ void Widget::onPlusButtonClicked(){
     resultList->addItem(result);
 }
 void Widget::onMinusButtonClicked(){
-    qDebug()<<"Minus Button Clicked";
     double a = firstInput->text().toDouble();
     double b = secondInput->text().toDouble();
     QString result = QString::number(a-b);
@@ -56,7 +53,6 @@ void Widget::onMinusButtonClicked(){
     resultList->addItem(result);
 }
 void Widget::onMultiplyButtonClicked(){
-    qDebug()<<"Multiply Button Clicked";
     double a = firstInput->text().toDouble();
     double b = secondInput->text().toDouble();
     QString result = QString::number(a*b);
@@ -64,7 +60,6 @@ void Widget::onMultiplyButtonClicked(){
     resultList->addItem(result);
 }
 void Widget::onDivideButtonClicked(){
-    qDebug()<<"Divide Button Clicked";
     double a = firstInput->text().toDouble();
     double b = secondInput->text().toDouble();
     QString result = QString::number(a/b);
@@ -72,7 +67,6 @@ void Widget::onDivideButtonClicked(){
     resultList->addItem(result);
 }
 void Widget::onClearButtonClicked(){
-    qDebug()<<"Clear Button Clicked";
     resultList->clear();
 }
 
